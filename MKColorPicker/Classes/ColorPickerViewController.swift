@@ -47,17 +47,17 @@ open class ColorPickerViewController: UIViewController, UIPopoverPresentationCon
         }
     }
     
-    open var scrollDirection: UICollectionViewScrollDirection = .horizontal{
+    open var scrollDirection: UICollectionView.ScrollDirection = .horizontal{
         didSet{
             colorPickerView.scrollDirection = scrollDirection
         }
     }
-
+    
     
     
     
     let colorPickerView = ColorPickerView(frame: CGRect(x: 0, y: 0, width: 250, height: 250))
-   
+    
     
     
     public init()
@@ -78,7 +78,7 @@ open class ColorPickerViewController: UIViewController, UIPopoverPresentationCon
         colorPickerView.style = style
         colorPickerView.selectionStyle = .check
         colorPickerView.isSelectedColorTappable = false
-//        colorPickerView.preselectedIndex = colorPickerView.colors.indices.first
+        //        colorPickerView.preselectedIndex = colorPickerView.colors.indices.first
         colorPickerView.colors = allColors
         self.view = colorPickerView
         self.preferredContentSize = colorPickerView.frame.size
