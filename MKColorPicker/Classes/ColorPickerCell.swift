@@ -57,7 +57,7 @@ class ColorPickerCell: UICollectionViewCell {
     func setSelected(selected: Bool){
         if selected{
             self.layer.borderWidth = 2
-            self.layer.borderColor = self.backgroundColor?.inverted.cgColor
+            self.layer.borderColor = UIColor.white.cgColor
         }else{
             self.layer.borderWidth = 0
             self.layer.borderColor = UIColor.clear.cgColor
